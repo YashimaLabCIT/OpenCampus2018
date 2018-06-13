@@ -4,8 +4,6 @@ $(function() {
   		exact : "environment"
 		}
 	},
-        video  = document.getElementById("video");
-	navigator.getUserMedia(medias, successCallback, errorCallback);
 
 	function successCallback(stream) {
 	  video.srcObject = stream;
@@ -14,6 +12,8 @@ $(function() {
 	function errorCallback(err) {
 	  alert(err);
 	};
+	video  = document.getElementById("video");
+	navigator.getUserMedia(medias, successCallback, errorCallback);
 	//カメラが起動できたかのフラグ
 	var localMediaStream = null;
 	//カメラ使えるかチェック
