@@ -19,28 +19,28 @@ $(function() {
 
 
 
-	//カメラが起動できたかのフラグ
-	var localMediaStream = null;
-	//カメラ使えるかチェック
-	var hasGetUserMedia = function() {
-		return (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
-	};
+// 	//カメラが起動できたかのフラグ
+// 	var localMediaStream = null;
+// 	//カメラ使えるかチェック
+// 	var hasGetUserMedia = function() {
+// 		return (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
+// 	};
 
-	//エラー
-	var onFailSoHard = function(e) {
-		console.log('エラー!', e);
-	};
+// 	//エラー
+// 	var onFailSoHard = function(e) {
+// 		console.log('エラー!', e);
+// 	};
 
-	if(!hasGetUserMedia()) {
-		alert("未対応ブラウザです。");
-	} else {
-		window.URL = window.URL || window.webkitURL;
-		navigator.getUserMedia  = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
-		navigator.getUserMedia({video: true}, function(stream) {
-			video.src = window.URL.createObjectURL(stream);
-			localMediaStream = stream;
-		}, onFailSoHard);
-	}
+// 	if(!hasGetUserMedia()) {
+// 		alert("未対応ブラウザです。");
+// 	} else {
+// 		window.URL = window.URL || window.webkitURL;
+// 		navigator.getUserMedia  = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+// 		navigator.getUserMedia({video: true}, function(stream) {
+// 			video.src = window.URL.createObjectURL(stream);
+// 			localMediaStream = stream;
+// 		}, onFailSoHard);
+// 	}
 
 	$("#start").click(function() {
 		if (localMediaStream) {
