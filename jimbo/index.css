@@ -6,9 +6,11 @@ body {
 #video {
   display: block;
   width: 100%;
+   z-index: 2;
 }
 
 #canvas {
   display: block;
   width: 100%;
+   z-index: ;
 }
