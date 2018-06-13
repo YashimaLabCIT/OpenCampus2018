@@ -1,8 +1,8 @@
-const const medias = {audio : false, video : {
-    facingMode : {
-      exact : "environment"
-    }
-  }},
+const medias = {audio : false, video : {
+        facingMode : {
+          exact : "environment"
+        }
+      }},
       video  = document.getElementById("video");
 
 navigator.getUserMedia(medias, successCallback, errorCallback);
