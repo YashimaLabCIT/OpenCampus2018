@@ -1,19 +1,22 @@
-$(function() {
-	const medias = {audio : false, video : {
-		facingMode : {
-  		exact : "environment"
-		}
-	},
-
-	function successCallback(stream) {
-	  video.srcObject = stream;
-	};
-
-	function errorCallback(err) {
-	  alert(err);
-	};
+const medias = {audio : false, video : {
+	facingMode : {
+	exact : "environment"
+	}
+}
 	video  = document.getElementById("video");
 	navigator.getUserMedia(medias, successCallback, errorCallback);
+function successCallback(stream) {
+  video.srcObject = stream;
+};
+
+function errorCallback(err) {
+  alert(err);
+};
+$(function() {
+
+
+
+
 	//カメラが起動できたかのフラグ
 	var localMediaStream = null;
 	//カメラ使えるかチェック
