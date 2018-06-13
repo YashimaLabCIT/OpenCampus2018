@@ -12,5 +12,5 @@ body {
 #canvas {
   display: block;
   width: 100%;
-   z-index: ;
+   z-index: 0;
 }
