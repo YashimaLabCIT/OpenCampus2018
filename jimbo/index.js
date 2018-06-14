@@ -18,7 +18,7 @@ function successCallback(stream) {
     video.onloadedmetadata = function(e) {
 
         
-        var websocket = new WebSocket("ws://10.73.8.152:8000/websocket");
+        var websocket = new WebSocket("wss://10.73.8.152:8000/websocket");
 
         // When the connection is open, send some data to the server
         websocket.onopen = function () {
