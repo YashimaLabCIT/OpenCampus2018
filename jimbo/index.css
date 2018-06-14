@@ -5,7 +5,7 @@ body {
 
 #video {
   display: block;
-  width: 0%;
+  width: 50%;
 }
 
 #canvasResult {
