@@ -1,11 +1,11 @@
-const medias = {audio : false, video : {
-        facingMode : {
-          exact : "environment"
-        }
-      }},
-      video  = document.getElementById("video");
+//const medias = {audio : false, video : {
+//        facingMode : {
+//          exact : "environment"
+//        }
+//      }},
+//      video  = document.getElementById("video");
 
-// const medias = {audio : false, video: true};
+const medias = {audio : false, video: true};
 
 navigator.getUserMedia(medias, successCallback, errorCallback);
 var cvs = document.createElement('canvas');
