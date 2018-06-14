@@ -22,6 +22,8 @@ function successCallback(stream) {
 
         // When the connection is open, send some data to the server
         websocket.onopen = function () {
+                
+                websocket.send("aa");
 
             //https://javascript.programmer-reference.com/js-image-base64/
             //canvas要素を生成してimg要素を反映する
