@@ -1,11 +1,11 @@
-const medias = {audio : false, video : {
-        facingMode : {
-          exact : "environment"
-        }
-      }},
-      video  = document.getElementById("video");
+// const medias = {audio : false, video : {
+//         facingMode : {
+//           exact : "environment"
+//         }
+//       }},
+//       video  = document.getElementById("video");
 
-// const medias = {audio : false, video: true};
+const medias = {audio : false, video: true};
 
 navigator.getUserMedia(medias, successCallback, errorCallback);
 var cvs = document.createElement('canvas');
@@ -17,12 +17,11 @@ function successCallback(stream) {
 
     video.onloadedmetadata = function(e) {
 
-        
-        var websocket = new WebSocket("wss://10.73.8.154:8000/websocket");
+        var websocket = new WebSocket("ws://10.73.8.152:8000/websocket");
 
         // When the connection is open, send some data to the server
         websocket.onopen = function () {
-                
+
             //https://javascript.programmer-reference.com/js-image-base64/
             //canvas要素を生成してimg要素を反映する
             cvs.width  = video.videoWidth;
